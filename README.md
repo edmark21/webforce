@@ -22,7 +22,7 @@ web bruteforce tool
 
 How to use?
 
-$ python2 web.py
+$ python2 webforce.py
 
 enter url:
 example: testsite.com/login
